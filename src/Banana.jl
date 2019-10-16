@@ -28,6 +28,9 @@ end
 
 export start, next, done
 
+"""
+This is how you insert elements.
+"""
 function Base.insert!(ll::LinkedList, pos, item)
     prev, next = pos
     push!(ll.nodes, Node(item, next))
