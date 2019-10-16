@@ -1,5 +1,7 @@
 # Banana.jl
 
+Docs for Banana!
+
 ```@index
 ```
 

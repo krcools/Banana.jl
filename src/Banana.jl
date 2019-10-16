@@ -35,6 +35,7 @@ function Base.insert!(ll::LinkedList, pos, item)
     prev, next = pos
     push!(ll.nodes, Node(item, next))
     prev > 0 && (ll.nodes[prev] = Node(ll.nodes[prev].data, lastindex(ll.nodes)))
+    prev == 0  && (ll.head = length(ll.nodes)) 
     return ll
 end
 
