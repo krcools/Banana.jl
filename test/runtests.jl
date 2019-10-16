@@ -1,6 +1,13 @@
 using Banana
 using Test
 
-@testset "Banana.jl" begin
-    # Write your own tests here.
+ll = LinkedList(["apple", "pear", "banana"])
+
+state = start(ll)
+item, state = next(ll, state)
+insert!(ll, state, "kiwi")
+for item in ll println(item) end
+
+@test first(ll) == "kiwi" 
+
 end
